@@ -1,0 +1,10 @@
+@import "tailwindcss";
+/* Full height */
+html, body, #__next {
+  height: 100%;
+}
+
+/* Smooth link hover */
+a {
+  transition: color 0.15s ease;
+}
