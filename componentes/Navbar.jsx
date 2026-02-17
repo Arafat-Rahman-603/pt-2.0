@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react"; // hamburger icons
+import { Menu, X } from "lucide-react"; 
 
 const sections = ["home", "projects", "about", "skills", "education", "resume", "contact"];
 
