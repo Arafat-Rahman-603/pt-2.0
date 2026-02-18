@@ -7,10 +7,12 @@ import Skills from "@/componentes/Skills";
 import Education from "@/componentes/Education";
 import Resume from "@/componentes/Resume";
 import Footer from "@/componentes/Footer";
+import CustomCursor from "@/componentes/CustomCursor ";
 
 export default function Home() {
   return (
     <>
+      <CustomCursor />
       <Navbar />
       <main>
         <Hero />
