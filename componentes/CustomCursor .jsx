@@ -35,7 +35,7 @@ export default function CustomCursor() {
     <>
       {/* Outer Ring */}
       <motion.div
-        className="fixed top-0 left-0 w-10 h-10 rounded-full border border-cyan-400 pointer-events-none z-50 mix-blend-difference"
+        className="fixed top-0 left-0 w-10 h-10 rounded-full border border-cyan-400 pointer-events-none z-100 mix-blend-difference"
         animate={{
           x: pos.x - 20,
           y: pos.y - 20,
