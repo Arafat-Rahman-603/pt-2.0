@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react"; 
 
-const sections = ["home", "projects", "about", "skills", "education", "resume", "contact"];
+const sections = ["home", "projects", "about", "skills", "resume", "contact"];
 
 export default function Navbar() {
   const [active, setActive] = useState("home");
