@@ -76,7 +76,7 @@ const card = {
 
 export default function Projects() {
   return (
-    <section className="py-24 px-6 md:px-16 bg-gradient-to-b from-gray-950 to-black">
+    <section id="projects" className="py-24 px-6 md:px-16 bg-gradient-to-b from-gray-950 to-black">
       <motion.h2
         className="text-4xl md:text-5xl font-bold text-center mb-16"
         initial={{ opacity: 0, y: 20 }}
