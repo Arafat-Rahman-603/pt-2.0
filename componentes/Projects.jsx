@@ -4,6 +4,14 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Uber (Clone)",
+    live: "https://uber-beta-ten.vercel.app",
+    code: "https://github.com/Arafat-Rahman-603/Uber-Clone", 
+    img: "/uber.png",
+    desc: "Uber clone with real-time location tracking and ride booking.",
+    tech: ["React.js", "Tailwind", "Express.js","MongoDB","JWT","Zustand"]
+  },
+  {
     title: "Portfolio Website",
     live: "https://portfolio-webpage-blue.vercel.app",
     code: "https://github.com/Arafat-Rahman-603/pt-2.0", 
