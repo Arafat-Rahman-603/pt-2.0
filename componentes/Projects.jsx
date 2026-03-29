@@ -3,6 +3,15 @@
 import { motion } from "framer-motion";
 
 const projects = [
+    {
+    title: "AetherAI",
+    live: "https://aether-ai-support.vercel.app",
+    code: "https://github.com/Arafat-Rahman-603/AetherAI", 
+    img: "/ai-sup.png",
+    desc: "AetherAI is an AI-powered SaaS platform for customer support, enabling businesses to provide instant and intelligent responses to user queries.",
+    tech: ["Next.js", "Tailwind","MongoDB","Clerk"]
+  },
+
   {
     title: "Uber (Clone)",
     live: "https://uber-beta-ten.vercel.app",
@@ -13,7 +22,7 @@ const projects = [
   },
   {
     title: "Portfolio Website",
-    live: "https://portfolio-webpage-blue.vercel.app",
+    live: "/",
     code: "https://github.com/Arafat-Rahman-603/pt-2.0", 
     img: "/p.png",
     desc: "Personal portfolio built with React and Tailwind CSS.",
