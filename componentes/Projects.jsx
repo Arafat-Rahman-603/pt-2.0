@@ -3,6 +3,14 @@
 import { motion } from "framer-motion";
 
 const projects = [
+  {
+    title: "WebCrafter AI",
+    live: "https://webcrafter-ai.vercel.app",
+    code: "https://github.com/Arafat-Rahman-603/WebCrafter-AI", 
+    img: "/webcrafter.png",
+    desc: "Developed an AI-powered web app that generates websites from user prompts. Built using Next.js and Node.js, with AI integration for real-time UI and content generation.",
+    tech: ["Next.js", "Tailwind","MongoDB","Express.js","Nodemailer","OpenRouter"]  
+  },
     {
     title: "AetherAI",
     live: "https://aether-ai-support.vercel.app",
