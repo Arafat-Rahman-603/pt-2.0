@@ -2,6 +2,9 @@ import "@/app/globals.css";
 import Script from "next/script";
 
 export const metadata = {
+   verification: {
+    google: "F5Yfey5DY9iRhWKZ6SDon_5oqUGWtqqYr30K6xJuDtw",
+  },
   title: "Arafat's Code",
   description:
     "Portfolio of Arafat Rahman - Frontend Developer from Bangladesh",
