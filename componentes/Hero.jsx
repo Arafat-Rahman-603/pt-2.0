@@ -196,8 +196,8 @@ export default function Hero() {
           transition={{ delay: 0.85 }}
         >
           {[
-            { label: "Projects Built", value: "20+" },
-            { label: "Technologies", value: "10+" },
+            { label: "Projects Built", value: "10+" },
+            { label: "Technologies", value: "12+" },
             { label: "Coffee Cups", value: "∞" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">

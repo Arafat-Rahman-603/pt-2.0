@@ -340,7 +340,7 @@ export default function Skills() {
         className="relative z-10 mt-20 max-w-3xl mx-auto grid grid-cols-3 gap-6"
       >
         {[
-          { value: "17+", label: "Technologies" },
+          { value: "12+", label: "Technologies" },
           { value: "1+", label: "Years Experience" },
           { value: "10+", label: "Projects Built" },
         ].map((stat, i) => (
