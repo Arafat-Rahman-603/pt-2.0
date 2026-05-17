@@ -2,9 +2,32 @@ import "@/app/globals.css";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Arafat Rahman | Frontend Developer",
+  title: "Arafat's Code",
   description:
     "Portfolio of Arafat Rahman - Frontend Developer from Bangladesh",
+
+  openGraph: {
+    title: "Arafat's Code",
+    description:
+      "Portfolio of Arafat Rahman - Frontend Developer from Bangladesh",
+    url: "https://arafatcodes.vercel.app",
+    images: [
+      {
+        url: "https://arafatcodes.vercel.app/preview.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Arafat's Code",
+    description:
+      "Portfolio of Arafat Rahman - Frontend Developer from Bangladesh",
+    images: ["https://arafatcodes.vercel.app/preview.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
