@@ -15,37 +15,46 @@ function getParticleCount() {
   return window.innerWidth < 768 ? MOBILE_PARTICLES : DESKTOP_PARTICLES;
 }
 
+function generateParticleData(count) {
+  const p = new Float32Array(count * 3);
+  const v = new Float32Array(count * 3);
+  const c = new Float32Array(count * 3);
+
+  const pal = [
+    [0.133, 0.827, 0.933],
+    [0.231, 0.510, 0.965],
+    [0.545, 0.361, 0.965],
+    [0.024, 0.714, 0.831],
+  ];
+
+  for (let i = 0; i < count; i++) {
+    const i3 = i * 3;
+    p[i3] = (Math.random() - 0.5) * 16;
+    p[i3 + 1] = (Math.random() - 0.5) * 16;
+    p[i3 + 2] = (Math.random() - 0.5) * 8;
+    v[i3] = (Math.random() - 0.5) * 0.004;
+    v[i3 + 1] = (Math.random() - 0.5) * 0.004;
+    v[i3 + 2] = (Math.random() - 0.5) * 0.002;
+    const col = pal[(i * 7) % pal.length];
+    c[i3] = col[0]; c[i3 + 1] = col[1]; c[i3 + 2] = col[2];
+  }
+  return { positions: p, velocities: v, colors: c };
+}
+
 function Particles({ count }) {
   const mesh = useRef();
   const lines = useRef();
   const mousePos = useRef({ x: 0, y: 0 });
   const frame = useRef(0);
+  const velocitiesRef = useRef(null);
   const { viewport } = useThree();
 
-  const { positions, velocities, colors } = useMemo(() => {
-    const p = new Float32Array(count * 3);
-    const v = new Float32Array(count * 3);
-    const c = new Float32Array(count * 3);
+  const [particleData, setParticleData] = useState(null);
 
-    const pal = [
-      [0.133, 0.827, 0.933],
-      [0.231, 0.510, 0.965],
-      [0.545, 0.361, 0.965],
-      [0.024, 0.714, 0.831],
-    ];
-
-    for (let i = 0; i < count; i++) {
-      const i3 = i * 3;
-      p[i3] = (Math.random() - 0.5) * 16;
-      p[i3 + 1] = (Math.random() - 0.5) * 16;
-      p[i3 + 2] = (Math.random() - 0.5) * 8;
-      v[i3] = (Math.random() - 0.5) * 0.004;
-      v[i3 + 1] = (Math.random() - 0.5) * 0.004;
-      v[i3 + 2] = (Math.random() - 0.5) * 0.002;
-      const col = pal[(i * 7) % pal.length];
-      c[i3] = col[0]; c[i3 + 1] = col[1]; c[i3 + 2] = col[2];
-    }
-    return { positions: p, velocities: v, colors: c };
+  useEffect(() => {
+    const data = generateParticleData(count);
+    velocitiesRef.current = data.velocities;
+    setParticleData(data);
   }, [count]);
 
   const linePos = useMemo(() => new Float32Array(MAX_CONNECTIONS * 6), []);
@@ -61,9 +70,9 @@ function Particles({ count }) {
   }, []);
 
   useFrame(() => {
-    if (!mesh.current) return;
+    if (!mesh.current || !velocitiesRef.current) return;
     const pos = mesh.current.geometry.attributes.position.array;
-    const vel = velocities;
+    const vel = velocitiesRef.current;
     const mx = mousePos.current.x * viewport.width * 0.3;
     const my = mousePos.current.y * viewport.height * 0.3;
 
@@ -118,12 +127,14 @@ function Particles({ count }) {
     }
   });
 
+  if (!particleData) return null;
+
   return (
     <>
       <points ref={mesh}>
         <bufferGeometry>
-          <bufferAttribute attach="attributes-position" count={count} array={positions} itemSize={3} />
-          <bufferAttribute attach="attributes-color" count={count} array={colors} itemSize={3} />
+          <bufferAttribute attach="attributes-position" count={count} array={particleData.positions} itemSize={3} />
+          <bufferAttribute attach="attributes-color" count={count} array={particleData.colors} itemSize={3} />
         </bufferGeometry>
         <pointsMaterial size={0.08} vertexColors transparent opacity={0.9} sizeAttenuation blending={THREE.AdditiveBlending} depthWrite={false} />
       </points>
