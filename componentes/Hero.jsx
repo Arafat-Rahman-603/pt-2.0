@@ -46,7 +46,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24 overflow-hidden bg-gray-950"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24 overflow-hidden"
     >
       {/* Ambient Orbs */}
       {floatingOrbs.map((orb, i) => (
@@ -76,8 +76,8 @@ export default function Hero() {
       />
 
       {/* Fade masks */}
-      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-gray-950 to-transparent pointer-events-none" />
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-gray-950 to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#030712]/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#030712]/80 to-transparent pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center">

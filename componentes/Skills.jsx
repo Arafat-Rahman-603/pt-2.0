@@ -227,7 +227,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="relative py-28 px-6 md:px-16 overflow-hidden bg-gradient-to-b from-black via-gray-950 to-gray-900"
+      className="relative py-28 px-6 md:px-16 overflow-hidden"
     >
       {/* Background Orbs */}
       <div

@@ -39,7 +39,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gray-950 overflow-hidden">
+    <footer className="relative overflow-hidden">
       {/* Animated gradient top border */}
       <div
         className="h-px w-full"

@@ -1,10 +1,30 @@
 @import "tailwindcss";
-/* Full height */
+
 html, body, #__next {
   height: 100%;
 }
 
-/* Smooth link hover */
 a {
   transition: color 0.15s ease;
+}
+
+/* ── 3D Canvas Background ── */
+.bg3d-canvas-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg3d-canvas-wrapper canvas {
+  pointer-events: auto;
+}
+
+/* All main content floats above the 3D canvas */
+.site-content {
+  position: relative;
+  z-index: 1;
 }

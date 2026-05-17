@@ -9,23 +9,27 @@ import Education from "@/componentes/Education";
 import Resume from "@/componentes/Resume";
 import Footer from "@/componentes/Footer";
 import CustomCursor from "@/componentes/CustomCursor ";
+import Background3D from "@/componentes/Background3D";
 
 export default function Home() {
   return (
     <>
+      <Background3D />
       <CustomCursor />
-      <Navbar />
-      <main>
-        <Hero />
-        <Projects />
-        <Reviews />
-        <About />
-        <Skills />
-        <Resume />
-        <Education />
-        <Contact />
-      </main>
-      <Footer />
+      <div className="site-content">
+        <Navbar />
+        <main>
+          <Hero />
+          <Projects />
+          <Reviews />
+          <About />
+          <Skills />
+          <Resume />
+          <Education />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

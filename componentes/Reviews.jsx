@@ -23,7 +23,7 @@ const reviews = [
     avatar: "SH",
     avatarColor: "from-violet-500 to-purple-600",
     rating: 5,
-    date: "March 2025",
+    date: "",
     review:
       "I commissioned the NextShop platform for my online store and the result blew me away. The UI is slick and modern, checkout flow is seamless, and the admin panel is intuitive. Product loading is blazing fast thanks to Next.js. Highly recommended for anyone looking to launch a premium e-commerce experience!",
   },
@@ -33,7 +33,7 @@ const reviews = [
     avatar: "NR",
     avatarColor: "from-emerald-500 to-teal-600",
     rating: 5,
-    date: "January 2025",
+    date: "",
     review:
       "Chatterly is exactly what our team needed for real-time collaboration. Messages appear instantly, the interface is clean, and it just works — even on slow connections. The developer went above and beyond with smooth animations and a thoughtful UX that keeps conversations flowing naturally. Brilliant work!",
   },
@@ -43,7 +43,7 @@ const reviews = [
     avatar: "NA",
     avatarColor: "from-cyan-500 to-blue-600",
     rating: 5,
-    date: "April 2025",
+    date: "",
     review:
       "We integrated AetherAI into our support workflow and response times dropped dramatically. The AI handles routine queries perfectly, the dashboard is easy to navigate, and the whole system scales without issues. The attention to detail — from the onboarding flow to the real-time analytics — is exceptional.",
   },
@@ -80,7 +80,7 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="py-24 px-4 md:px-10 bg-gradient-to-b from-black to-gray-950 overflow-hidden"
+      className="py-24 px-4 md:px-10 overflow-hidden"
     >
       {/* ── Heading ── */}
       <motion.div
@@ -128,6 +128,7 @@ export default function Reviews() {
           navigation={true}
           keyboard={{ enabled: true }}
           loop={true}
+          loopAdditionalSlides={3}
           onAutoplayTimeLeft={onAutoplayTimeLeft}
           className="reviews-swiper !pb-14"
         >

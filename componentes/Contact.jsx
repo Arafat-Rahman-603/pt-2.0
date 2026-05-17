@@ -180,7 +180,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="relative py-28 px-6 md:px-16 overflow-hidden bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white"
+      className="relative py-28 px-6 md:px-16 overflow-hidden text-white"
     >
       {/* ── Background Orbs ── */}
       <div

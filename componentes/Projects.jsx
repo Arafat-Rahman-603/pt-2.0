@@ -167,7 +167,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 px-4 md:px-10 bg-gradient-to-b from-gray-950 to-black overflow-hidden"
+      className="py-24 px-4 md:px-10 overflow-hidden"
     >
       {/* ── Heading ── */}
       <motion.h2
