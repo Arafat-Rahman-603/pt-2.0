@@ -126,7 +126,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          Hi, I'm{" "}
+          {"Hi, I'm"}{" "}
           <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-violet-500 bg-clip-text text-transparent">
             Arafat
           </span>

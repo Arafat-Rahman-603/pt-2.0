@@ -33,7 +33,7 @@ export default function Navbar() {
     <motion.nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "py-3 bg-gray-950/80 backdrop-blur-xl border-b border-white/5 shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
+          ? "py-3 bg-gray-950/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
           : "py-5 bg-transparent"
       }`}
       initial={{ y: -80, opacity: 0 }}
