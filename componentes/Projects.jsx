@@ -19,6 +19,14 @@ import "swiper/css/effect-coverflow";
 
 const projects = [
   {
+    title: "Fancy Planet",
+    live: "https://fancyplanet.vercel.app/",
+    code: "https://github.com/Arafat-Rahman-603/project-0012",
+    img: "/fancy.png",
+    desc: "Fancy Planet is a cutting-edge e-commerce platform where style meets substance. Explore a curated collection of premium products, enjoy seamless browsing, and discover new favorites with every click.",
+    tech: ["Next.js", "Tailwind", "MongoDB", "Express.js", "Nodemailer", "JWT"],
+  },
+  {
     title: "WebCrafter AI",
     live: "https://webcrafter-ai.vercel.app",
     code: "https://github.com/Arafat-Rahman-603/WebCrafter-AI",
