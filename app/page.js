@@ -10,12 +10,14 @@ import Resume from "@/componentes/Resume";
 import Footer from "@/componentes/Footer";
 import CustomCursor from "@/componentes/CustomCursor ";
 import Background3D from "@/componentes/Background3D";
+import ScrollProgress from "@/componentes/ScrollProgress";
 
 export default function Home() {
   return (
     <>
       <Background3D />
       <CustomCursor />
+      <ScrollProgress />
       <div className="site-content">
         <Navbar />
         <main>
