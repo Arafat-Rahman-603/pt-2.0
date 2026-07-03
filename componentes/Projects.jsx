@@ -18,6 +18,14 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 
 const projects = [
+  { 
+    title: "Floka",
+    live: "https://floka-one.vercel.app/",
+    code: "https://github.com/Arafat-Rahman-603",
+    img: "/floka.png",
+    desc: "Floka is a next-generation animated website",
+    tech: ["Next.js", "Tailwind", "Framer Motion", "Three.js", "Resend", "JWT"],
+  },
   {
     title: "Fancy Planet",
     live: "https://fancyplanet.vercel.app/",
