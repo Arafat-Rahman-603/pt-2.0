@@ -287,7 +287,8 @@ export default function Contact() {
                   key={i}
                   href={s.href}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  // rel="me" indicates ownership of the target profile to search and discovery engines
+                  rel="me noopener noreferrer"
                   aria-label={s.label}
                   whileHover={{ scale: 1.15, y: -3 }}
                   whileTap={{ scale: 0.95 }}
@@ -298,6 +299,8 @@ export default function Contact() {
                   }}
                 >
                   {s.icon}
+                  {/* Crawlable text label for search engines and assistive technologies */}
+                  <span className="sr-only">{s.label}</span>
                 </motion.a>
               ))}
             </div>
