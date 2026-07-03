@@ -279,7 +279,7 @@ export default function Projects() {
                       ))}
                     </div>
 
-                    {/* Buttons */}
+                    {/* Buttons with descriptive crawlable anchor text for search bots & screen readers */}
                     <div className="flex gap-3">
                       <a
                         href={p.live}
@@ -294,7 +294,7 @@ export default function Projects() {
                           shadow-lg shadow-cyan-500/20
                         "
                       >
-                        Live Demo
+                        Live Demo <span className="sr-only">of {p.title} project</span>
                       </a>
                       <a
                         href={p.code}
@@ -309,7 +309,7 @@ export default function Projects() {
                           hover:scale-105 transition-all duration-200
                         "
                       >
-                        Source Code
+                        Source Code <span className="sr-only">of {p.title} project</span>
                       </a>
                     </div>
                   </div>
