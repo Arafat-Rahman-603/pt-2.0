@@ -61,8 +61,9 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
+  // Semantic Header landmark enclosing navigation bar
   return (
-    <motion.nav
+    <motion.header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
           ? "py-3 bg-[#030712]/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
@@ -85,8 +86,8 @@ export default function Navbar() {
           <span className="text-white">.</span>
         </motion.a>
 
-        {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-center gap-1">
+        {/* Desktop Nav Links wrapped in semantic nav tag */}
+        <nav aria-label="Desktop Navigation" className="hidden md:flex items-center gap-1">
           {sections.map(({ id }) => (
             <a
               key={id}
@@ -124,7 +125,7 @@ export default function Navbar() {
               Hire Me
             </span>
           </motion.a>
-        </div>
+        </nav>
 
         {/* Mobile Hamburger */}
         <motion.button
@@ -203,8 +204,8 @@ export default function Navbar() {
               {/* Divider */}
               <div className="mx-6 my-3 h-px bg-gradient-to-r from-cyan-500/30 via-white/8 to-transparent" />
 
-              {/* Nav Links */}
-              <div className="flex flex-col gap-1 px-4 py-2 flex-1">
+              {/* Nav Links wrapped in semantic nav tag for mobile devices */}
+              <nav aria-label="Mobile Navigation" className="flex flex-col gap-1 px-4 py-2 flex-1">
                 {sections.map(({ id, icon: Icon }, index) => {
                   const isActive = active === id;
                   return (
@@ -271,7 +272,7 @@ export default function Navbar() {
                     </motion.a>
                   );
                 })}
-              </div>
+              </nav>
 
               {/* Bottom section */}
               <div className="p-4 mt-auto">
@@ -304,6 +305,6 @@ export default function Navbar() {
           </>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </motion.header>
   );
 }
