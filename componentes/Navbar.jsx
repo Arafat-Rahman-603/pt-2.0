@@ -63,95 +63,108 @@ export default function Navbar() {
 
   // Semantic Header landmark enclosing navigation bar
   return (
-    <motion.header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? "py-3 bg-[#030712]/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
-          : "py-5 bg-transparent"
+    <div
+      className={`fixed top-0 left-0 w-full z-50 flex justify-center pointer-events-none transition-all duration-500 ${
+        scrolled ? "pt-4 px-4 md:px-6" : "pt-0 px-0"
       }`}
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        {/* Brand */}
-        <motion.a
-          href="#home"
-          className="text-xl font-bold tracking-tight"
-          whileHover={{ scale: 1.04 }}
-        >
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Arafat
-          </span>
-          <span className="text-white">.</span>
-        </motion.a>
-
-        {/* Desktop Nav Links wrapped in semantic nav tag */}
-        <nav aria-label="Desktop Navigation" className="hidden md:flex items-center gap-1">
-          {sections.map(({ id }) => (
-            <a
-              key={id}
-              href={`#${id}`}
-              className="relative px-4 py-2 rounded-lg capitalize text-sm font-medium transition-colors duration-200 group"
-            >
-              <span
-                className={`relative z-10 transition-colors duration-200 ${
-                  active === id ? "text-white" : "text-gray-400 hover:text-gray-200"
-                }`}
-              >
-                {id}
-              </span>
-              {active === id && (
-                <motion.span
-                  layoutId="nav-pill"
-                  className="absolute inset-0 rounded-lg bg-white/8 border border-white/10"
-                  transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                />
-              )}
-            </a>
-          ))}
-
-          {/* Hire Me CTA */}
+      <motion.header
+        className={`w-full pointer-events-auto transition-all duration-500 ease-out mx-auto ${
+          scrolled
+            ? "max-w-4xl rounded-2xl bg-[#030712]/75 border border-white/10 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.4)] py-2.5 px-6"
+            : "max-w-6xl py-5 px-6 bg-transparent border border-transparent backdrop-blur-none"
+        }`}
+        initial={{ y: -80, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <div className="w-full flex items-center justify-between">
+          {/* Brand Logo with dynamic dot transition and hover scale */}
           <motion.a
-            href="#contact"
-            className="ml-3 relative inline-flex items-center gap-2 px-5 py-2 rounded-lg text-sm font-semibold text-white overflow-hidden group"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
+            href="#home"
+            className="text-xl font-extrabold tracking-tight relative group flex items-center gap-0.5"
+            whileHover={{ scale: 1.04 }}
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 transition-all duration-300 group-hover:opacity-90" />
-            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-cyan-500 to-blue-600" />
-            <span className="relative z-10 flex items-center gap-2">
-              <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              Hire Me
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-blue-500 bg-clip-text text-transparent">
+              Arafat
             </span>
+            <motion.span
+              className="inline-block text-cyan-400 font-extrabold"
+              animate={{ scale: [1, 1.35, 1], y: [0, -1, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            >
+              .
+            </motion.span>
           </motion.a>
-        </nav>
 
-        {/* Mobile Hamburger */}
-        <motion.button
-          className="md:hidden relative w-10 h-10 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-colors"
-          style={{
-            background: "rgba(255,255,255,0.06)",
-            border: "1px solid rgba(255,255,255,0.1)",
-          }}
-          onClick={() => setMobileOpen(!mobileOpen)}
-          whileTap={{ scale: 0.92 }}
-        >
-          <AnimatePresence mode="wait">
-            {mobileOpen ? (
-              <motion.div key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                <X size={20} />
-              </motion.div>
-            ) : (
-              <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
-                <Menu size={20} />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.button>
-      </div>
+          {/* Desktop Nav Links wrapped in semantic nav tag */}
+          <nav aria-label="Desktop Navigation" className="hidden md:flex items-center gap-1">
+            {sections.map(({ id }) => (
+              <a
+                key={id}
+                href={`#${id}`}
+                className="relative px-4 py-2 rounded-lg capitalize text-sm font-medium transition-colors duration-200 group"
+              >
+                <span
+                  className={`relative z-10 transition-colors duration-200 ${
+                    active === id ? "text-white" : "text-gray-400 hover:text-gray-200"
+                  }`}
+                >
+                  {id}
+                </span>
+                {active === id && (
+                  <motion.span
+                    layoutId="nav-pill"
+                    className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/8 to-blue-500/8 border border-cyan-500/20 shadow-[0_2px_10px_rgba(6,182,212,0.08)]"
+                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                  />
+                )}
+              </a>
+            ))}
 
-      {/* Mobile Sidebar */}
+            {/* Hire Me CTA with premium shadow glow */}
+            <motion.a
+              href="#contact"
+              className="ml-3 relative inline-flex items-center gap-2 px-5 py-2 rounded-xl text-sm font-bold text-white overflow-hidden group shadow-[0_4px_20px_rgba(6,182,212,0.15)] hover:shadow-[0_8px_25px_rgba(6,182,212,0.3)] transition-all duration-300"
+              whileHover={{ scale: 1.04, y: -0.5 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 transition-all duration-300 group-hover:opacity-90" />
+              <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600" />
+              <span className="relative z-10 flex items-center gap-2.5">
+                <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse shadow-[0_0_8px_#4ade80]" />
+                Hire Me
+              </span>
+            </motion.a>
+          </nav>
+
+          {/* Mobile Hamburger with interactive hover effects */}
+          <motion.button
+            className="md:hidden relative w-11 h-11 rounded-xl flex items-center justify-center text-gray-300 hover:text-white transition-colors"
+            style={{
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.08)",
+            }}
+            onClick={() => setMobileOpen(!mobileOpen)}
+            whileHover={{ scale: 1.05, border: "1px solid rgba(6, 182, 212, 0.4)" }}
+            whileTap={{ scale: 0.92 }}
+          >
+            <AnimatePresence mode="wait">
+              {mobileOpen ? (
+                <motion.div key="x" initial={{ rotate: -90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: 90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                  <X size={20} />
+                </motion.div>
+              ) : (
+                <motion.div key="menu" initial={{ rotate: 90, opacity: 0 }} animate={{ rotate: 0, opacity: 1 }} exit={{ rotate: -90, opacity: 0 }} transition={{ duration: 0.2 }}>
+                  <Menu size={20} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
+        </div>
+      </motion.header>
+
+      {/* Mobile Sidebar - Placed outside of motion.header to avoid transform-relative coordinate clipping */}
       <AnimatePresence>
         {mobileOpen && (
           <>
@@ -162,7 +175,7 @@ export default function Navbar() {
               animate="open"
               exit="exit"
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden pointer-events-auto"
               style={{ zIndex: 55 }}
               onClick={() => setMobileOpen(false)}
             />
@@ -173,7 +186,7 @@ export default function Navbar() {
               initial="closed"
               animate="open"
               exit="exit"
-              className="fixed top-0 right-0 w-[280px] h-screen md:hidden flex flex-col"
+              className="fixed top-0 right-0 w-[280px] h-screen md:hidden flex flex-col pointer-events-auto"
               style={{
                 zIndex: 60,
                 background: "linear-gradient(195deg, rgba(6,182,212,0.08) 0%, rgba(3,7,18,0.97) 30%, rgba(3,7,18,0.99) 100%)",
@@ -182,8 +195,11 @@ export default function Navbar() {
                 boxShadow: "-20px 0 60px rgba(0,0,0,0.5)",
               }}
             >
+              {/* Internal decorative neon glow circle inside mobile sidebar */}
+              <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-cyan-500/10 blur-[60px] pointer-events-none" />
+
               {/* Header */}
-              <div className="flex items-center justify-between p-6 pb-2">
+              <div className="relative z-10 flex items-center justify-between p-6 pb-2">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400/70">
                   Navigation
                 </span>
@@ -202,10 +218,10 @@ export default function Navbar() {
               </div>
 
               {/* Divider */}
-              <div className="mx-6 my-3 h-px bg-gradient-to-r from-cyan-500/30 via-white/8 to-transparent" />
+              <div className="relative z-10 mx-6 my-3 h-px bg-gradient-to-r from-cyan-500/30 via-white/8 to-transparent" />
 
               {/* Nav Links wrapped in semantic nav tag for mobile devices */}
-              <nav aria-label="Mobile Navigation" className="flex flex-col gap-1 px-4 py-2 flex-1">
+              <nav aria-label="Mobile Navigation" className="relative z-10 flex flex-col gap-1 px-4 py-2 flex-1">
                 {sections.map(({ id, icon: Icon }, index) => {
                   const isActive = active === id;
                   return (
@@ -275,7 +291,7 @@ export default function Navbar() {
               </nav>
 
               {/* Bottom section */}
-              <div className="p-4 mt-auto">
+              <div className="relative z-10 p-4 mt-auto">
                 {/* Divider */}
                 <div className="mb-4 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
 
@@ -305,6 +321,6 @@ export default function Navbar() {
           </>
         )}
       </AnimatePresence>
-    </motion.header>
+    </div>
   );
 }
