@@ -1,5 +1,6 @@
 import Navbar from "@/componentes/Navbar";
 import Hero from "@/componentes/Hero";
+import DigitalBrochure from "@/componentes/DigitalBrochure";
 import Projects from "@/componentes/Projects";
 import About from "@/componentes/About";
 import Contact from "@/componentes/Contact";
@@ -22,6 +23,7 @@ export default function Home() {
         <Navbar />
         <main>
           <Hero />
+          <DigitalBrochure />
           <Projects />
           <Reviews />
           <About />
