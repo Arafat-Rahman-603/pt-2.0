@@ -202,7 +202,8 @@ export default function About() {
               <motion.a
                 href="https://github.com/Arafat-Rahman-603"
                 target="_blank"
-                rel="noopener noreferrer"
+                // rel="me" establishes this as an official social profile of the site author
+                rel="me noopener noreferrer"
                 className="group relative px-7 py-3 rounded-xl text-sm font-semibold text-white overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
