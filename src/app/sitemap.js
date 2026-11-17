@@ -1,14 +1,13 @@
-// Dynamic sitemap generation following Next.js App Router guidelines
-export default function sitemap() {
-  const baseUrl = "https://arafatcodes.vercel.app";
+import { site } from "@/lib/content";
 
-  // Returns sitemap nodes with page URL, modification date, crawl frequency and priority
+// Dynamic sitemap.xml (Next.js App Router)
+export default function sitemap() {
   return [
     {
-      url: baseUrl,
+      url: site.url,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 1.0,
+      priority: 1,
     },
   ];
 }

@@ -1,0 +1,458 @@
+{
+  "site": {
+    "name": "Arafat Rahman",
+    "shortName": "Arafat",
+    "url": "https://arafatcodes.vercel.app",
+    "title": "Arafat Rahman | Full Stack Software Developer Portfolio",
+    "titleTemplate": "%s | Arafat Rahman",
+    "description": "Official portfolio of Arafat Rahman, Full Stack Software Developer from Bangladesh specializing in React, Next.js, Node.js, and MongoDB. Browse projects, skills, and resume.",
+    "shortDescription": "Official portfolio of Arafat Rahman, Full Stack Software Developer from Bangladesh specializing in React, Next.js, Node.js, and MongoDB.",
+    "role": "Full Stack Software Developer",
+    "location": "Dhaka, Bangladesh",
+    "country": "Bangladesh",
+    "locale": "en_US",
+    "ogImage": "/images/og/preview.png",
+    "profileImage": "/images/profile/profile.webp",
+    "resume": "/ArafatRahmanResume.pdf",
+    "googleVerification": "F5Yfey5DY9iRhWKZ6SDon_5oqUGWtqqYr30K6xJuDtw",
+    "chatWidget": {
+      "src": "https://aether-ai-support.vercel.app/AetherAI.js",
+      "businessId": "user_3BZsYd7NMzub7pnZ3PFXyimBBCQ"
+    },
+    "keywords": [
+      "Arafat Rahman",
+      "Arafatcodes",
+      "Full Stack Software Developer",
+      "Frontend Developer Bangladesh",
+      "MERN Stack Developer",
+      "Next.js Developer Dhaka",
+      "React Developer",
+      "Software Engineer Portfolio"
+    ],
+    "knowsAbout": [
+      "Software Development",
+      "Web Development",
+      "Full Stack Development",
+      "React.js",
+      "Next.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind CSS",
+      "Framer Motion",
+      "JavaScript",
+      "MERN Stack"
+    ]
+  },
+
+  "socials": [
+    { "label": "GitHub", "icon": "github", "href": "https://github.com/Arafat-Rahman-603" },
+    { "label": "LinkedIn", "icon": "linkedin", "href": "https://www.linkedin.com/in/arafatrahman603" },
+    { "label": "Facebook", "icon": "facebook", "href": "https://www.facebook.com/profile.php?id=100080753802018" }
+  ],
+
+  "navigation": {
+    "brand": "Arafat",
+    "links": [
+      { "id": "home", "label": "Home", "icon": "home" },
+      { "id": "journey", "label": "Journey", "icon": "book-open" },
+      { "id": "projects", "label": "Projects", "icon": "folder-open" },
+      { "id": "about", "label": "About", "icon": "user" },
+      { "id": "skills", "label": "Skills", "icon": "zap" },
+      { "id": "contact", "label": "Contact", "icon": "mail" }
+    ],
+    "cta": { "label": "Hire Me", "href": "#contact" }
+  },
+
+  "pages": {
+    "home": {
+      "hero": {
+        "badge": "Available for freelance work",
+        "greeting": "Hi, I'm",
+        "name": "Arafat Rahman",
+        "roles": [
+          "Full Stack Developer",
+          "MERN Stack Developer",
+          "React Developer",
+          "Next.js Developer",
+          "JavaScript Enthusiast"
+        ],
+        "description": "I craft responsive, high-performance web apps with React, Next.js, Tailwind CSS, Node.js & MongoDB — focused on clean UI and seamless UX.",
+        "primaryCta": { "label": "View Projects", "href": "#projects" },
+        "secondaryCta": { "label": "Download Resume", "href": "/ArafatRahmanResume.pdf", "download": true },
+        "stats": [
+          { "value": 10, "suffix": "+", "label": "Projects Built" },
+          { "value": 12, "suffix": "+", "label": "Technologies" },
+          { "value": 1, "suffix": "+", "label": "Years Experience" }
+        ],
+        "portrait": {
+          "image": "/images/profile/avatar-3d.webp",
+          "depth": "/images/profile/avatar-3d-depth.webp",
+          "fallback": "/images/profile/profile.webp",
+          "alt": "3D portrait of Arafat Rahman"
+        }
+      },
+
+      "marquee": [
+        "React", "Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS",
+        "Framer Motion", "Three.js", "Socket.io", "Redux", "Zustand", "JWT"
+      ],
+
+      "journey": {
+        "eyebrow": "Digital Brochure",
+        "title": "Discover",
+        "highlight": "My Journey",
+        "subtitle": "Scroll through the chapters that shape how I build for the web.",
+        "chapters": [
+          {
+            "id": 1,
+            "title": "Hi, I'm Arafat Rahman",
+            "description": "A passionate Full-Stack Developer turning complex ideas into clean, user-friendly experiences.",
+            "icon": "user",
+            "accentFrom": "#a855f7",
+            "accentTo": "#ec4899",
+            "tags": ["Developer", "Problem Solver", "Bangladesh"]
+          },
+          {
+            "id": 2,
+            "title": "MERN Stack Specialist",
+            "description": "Building responsive full-stack web applications with React, Next.js, Node.js, Express, and MongoDB.",
+            "icon": "code",
+            "accentFrom": "#6366f1",
+            "accentTo": "#06b6d4",
+            "tags": ["React", "Next.js", "Node", "MongoDB"]
+          },
+          {
+            "id": 3,
+            "title": "Fluid Framer Animations",
+            "description": "Designing beautiful, pixel-perfect interfaces with smooth transitions and micro-interactions using Framer Motion.",
+            "icon": "palette",
+            "accentFrom": "#10b981",
+            "accentTo": "#06b6d4",
+            "tags": ["Framer Motion", "UI", "Micro-interactions"]
+          },
+          {
+            "id": 4,
+            "title": "Optimized Performance",
+            "description": "Every project is crafted for optimal rendering, accessibility, and high performance from day one.",
+            "icon": "gauge",
+            "accentFrom": "#f59e0b",
+            "accentTo": "#ef4444",
+            "tags": ["Core Web Vitals", "a11y", "SEO"]
+          },
+          {
+            "id": 5,
+            "title": "Version Control & Teams",
+            "description": "Experienced in writing scalable architectures, Git-based workflows, and collaborating effectively to build products.",
+            "icon": "git-branch",
+            "accentFrom": "#ec4899",
+            "accentTo": "#8b5cf6",
+            "tags": ["Git", "GitHub", "Teamwork"]
+          },
+          {
+            "id": 6,
+            "title": "Production Deployment",
+            "description": "Deploying secure apps to Vercel, Railway, Render, Docker, and configuring automated CI/CD workflows.",
+            "icon": "shield",
+            "accentFrom": "#3b82f6",
+            "accentTo": "#8b5cf6",
+            "tags": ["Vercel", "Railway", "Docker", "CI/CD"]
+          }
+        ]
+      },
+
+      "projects": {
+        "eyebrow": "Selected Work",
+        "title": "My",
+        "highlight": "Projects",
+        "subtitle": "A collection of products, platforms and experiments I've designed and shipped.",
+        "featuredCount": 4,
+        "items": [
+          {
+            "slug": "floka",
+            "title": "Floka",
+            "live": "https://floka-one.vercel.app/",
+            "code": "https://github.com/Arafat-Rahman-603",
+            "image": "/images/projects/floka.webp",
+            "description": "Floka is a next-generation animated website.",
+            "tech": ["Next.js", "Tailwind", "Framer Motion", "Three.js", "Resend", "JWT"],
+            "accent": "#22d3ee"
+          },
+          {
+            "slug": "fancy-planet",
+            "title": "Fancy Planet",
+            "live": "https://fancyplanet.vercel.app/",
+            "code": "https://github.com/Arafat-Rahman-603/project-0012",
+            "image": "/images/projects/fancy.webp",
+            "description": "Fancy Planet is a cutting-edge e-commerce platform where style meets substance. Explore a curated collection of premium products, enjoy seamless browsing, and discover new favorites with every click.",
+            "tech": ["Next.js", "Tailwind", "MongoDB", "Express.js", "Nodemailer", "JWT"],
+            "accent": "#f472b6"
+          },
+          {
+            "slug": "webcrafter-ai",
+            "title": "WebCrafter AI",
+            "live": "https://webcrafter-ai.vercel.app",
+            "code": "https://github.com/Arafat-Rahman-603/WebCrafter-AI",
+            "image": "/images/projects/webcrafter.webp",
+            "description": "An AI-powered web app that generates websites from user prompts. Built using Next.js and Node.js, with AI integration for real-time UI and content generation.",
+            "tech": ["Next.js", "Tailwind", "MongoDB", "Express.js", "Nodemailer", "OpenRouter"],
+            "accent": "#a78bfa"
+          },
+          {
+            "slug": "aether-ai",
+            "title": "AetherAI",
+            "live": "https://aether-ai-support.vercel.app",
+            "code": "https://github.com/Arafat-Rahman-603/AetherAI",
+            "image": "/images/projects/ai-sup.webp",
+            "description": "AetherAI is an AI-powered SaaS platform for customer support, enabling businesses to provide instant and intelligent responses to user queries.",
+            "tech": ["Next.js", "Tailwind", "MongoDB", "Clerk"],
+            "accent": "#38bdf8"
+          },
+          {
+            "slug": "uber-clone",
+            "title": "Uber (Clone)",
+            "live": "https://uber-beta-ten.vercel.app",
+            "code": "https://github.com/Arafat-Rahman-603/Uber-Clone",
+            "image": "/images/projects/uber.webp",
+            "description": "Uber clone with real-time location tracking and ride booking.",
+            "tech": ["React.js", "Tailwind", "Express.js", "MongoDB", "JWT", "Zustand"],
+            "accent": "#facc15"
+          },
+          {
+            "slug": "portfolio",
+            "title": "Portfolio Website",
+            "live": "/",
+            "code": "https://github.com/Arafat-Rahman-603/pt-2.0",
+            "image": "/images/projects/p.webp",
+            "description": "Personal portfolio built with Next.js, Tailwind CSS and Three.js featuring smooth scroll animations.",
+            "tech": ["Next.js", "Tailwind", "Framer Motion", "Three.js"],
+            "accent": "#22d3ee"
+          },
+          {
+            "slug": "chatterly",
+            "title": "Chatterly",
+            "live": "https://nexchat-frontend.vercel.app/",
+            "code": "https://github.com/Arafat-Rahman-603/nexchat-frontend",
+            "image": "/images/projects/p-5.webp",
+            "description": "Real-time messaging app with authentication and sockets.",
+            "tech": ["Zustand", "MongoDB", "Socket.io", "JWT"],
+            "accent": "#34d399"
+          },
+          {
+            "slug": "nextshop",
+            "title": "E-commerce Website",
+            "live": "https://nextshop-two.vercel.app/",
+            "code": "https://github.com/Arafat-Rahman-603/nextshop-frontend",
+            "image": "/images/projects/p4.webp",
+            "description": "Full-stack e-commerce platform with modern UI.",
+            "tech": ["Next.js", "MongoDB", "Redux", "Express.js"],
+            "accent": "#fb923c"
+          },
+          {
+            "slug": "home-rent",
+            "title": "Home Rent App",
+            "live": "https://home-rent-one.vercel.app",
+            "code": "https://github.com/Arafat-Rahman-603/Home-Rent",
+            "image": "/images/projects/p1.webp",
+            "description": "Property browsing demo platform.",
+            "tech": ["React", "Express", "MongoDB", "Redux"],
+            "accent": "#60a5fa"
+          },
+          {
+            "slug": "global-chat",
+            "title": "Global Chat App",
+            "live": "https://chatterly-puce.vercel.app",
+            "code": "https://github.com/Arafat-Rahman-603/Fontend",
+            "image": "/images/projects/p2.webp",
+            "description": "Simple global chat application.",
+            "tech": ["React", "Socket.io", "Express.js"],
+            "accent": "#c084fc"
+          },
+          {
+            "slug": "k72-clone",
+            "title": "K72 Clone",
+            "live": "https://k72-ca-eta.vercel.app/",
+            "code": "https://github.com/Arafat-Rahman-603/K72-ca",
+            "image": "/images/projects/p3.webp",
+            "description": "Frontend clone with stunning GSAP animation effects.",
+            "tech": ["React", "GSAP", "Tailwind"],
+            "accent": "#a3e635"
+          }
+        ]
+      },
+
+      "reviews": {
+        "eyebrow": "Testimonials",
+        "title": "Client",
+        "highlight": "Reviews",
+        "subtitle": "Real feedback from people who trusted me with their ideas.",
+        "items": [
+          {
+            "name": "Sakib Hasan",
+            "project": "NextShop — E-commerce Website",
+            "avatar": "SH",
+            "accentFrom": "#8b5cf6",
+            "accentTo": "#9333ea",
+            "rating": 5,
+            "review": "I commissioned the NextShop platform for my online store and the result blew me away. The UI is slick and modern, checkout flow is seamless, and the admin panel is intuitive. Product loading is blazing fast thanks to Next.js. Highly recommended for anyone looking to launch a premium e-commerce experience!"
+          },
+          {
+            "name": "Noor Rahman",
+            "project": "Chatterly — Global Chat App",
+            "avatar": "NR",
+            "accentFrom": "#10b981",
+            "accentTo": "#0d9488",
+            "rating": 5,
+            "review": "Chatterly is exactly what our team needed for real-time collaboration. Messages appear instantly, the interface is clean, and it just works — even on slow connections. The developer went above and beyond with smooth animations and a thoughtful UX that keeps conversations flowing naturally. Brilliant work!"
+          },
+          {
+            "name": "Nil Ahmed",
+            "project": "AetherAI — Customer Support Platform",
+            "avatar": "NA",
+            "accentFrom": "#06b6d4",
+            "accentTo": "#2563eb",
+            "rating": 5,
+            "review": "We integrated AetherAI into our support workflow and response times dropped dramatically. The AI handles routine queries perfectly, the dashboard is easy to navigate, and the whole system scales without issues. The attention to detail — from the onboarding flow to the real-time analytics — is exceptional."
+          }
+        ]
+      },
+
+      "about": {
+        "eyebrow": "About Me",
+        "title": "Who",
+        "highlight": "I Am",
+        "subtitle": "A passionate developer from Bangladesh building modern, scalable, and visually stunning web experiences.",
+        "badge": "Full Stack Developer · MERN Stack",
+        "name": "Arafat Rahman",
+        "image": "/images/profile/profile.webp",
+        "imageAlt": "Portrait of Arafat Rahman",
+        "bio": [
+          "Hello! I'm Arafat Rahman, a passionate Full-Stack Developer who loves turning complex ideas into clean, user-friendly experiences.",
+          "I specialise in building modern UIs with React & Next.js, crafting robust backends with Node.js & MongoDB, and delivering delightful interactions through smooth animations and thoughtful design."
+        ],
+        "stats": [
+          { "value": 1, "suffix": "+", "label": "Years Experience" },
+          { "value": 10, "suffix": "+", "label": "Projects Built" },
+          { "value": 12, "suffix": "+", "label": "Technologies" },
+          { "value": 100, "suffix": "%", "label": "Passion" }
+        ],
+        "highlights": [
+          { "icon": "target", "title": "Problem Solver", "description": "I love breaking down complex challenges into clean, elegant solutions." },
+          { "icon": "zap", "title": "Performance Focused", "description": "Every app I build is optimized for speed, accessibility, and scalability." },
+          { "icon": "palette", "title": "UI/UX Driven", "description": "I care deeply about pixel-perfect, intuitive, and beautiful interfaces." }
+        ],
+        "tags": ["React", "Next.js", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS", "Framer Motion", "REST APIs"],
+        "ctas": [
+          { "label": "View GitHub", "href": "https://github.com/Arafat-Rahman-603", "icon": "github", "external": true },
+          { "label": "Contact Me", "href": "#contact" }
+        ]
+      },
+
+      "skills": {
+        "eyebrow": "What I Work With",
+        "title": "Skills &",
+        "highlight": "Expertise",
+        "subtitle": "A curated set of technologies I use to craft high-performance, scalable, and beautiful digital experiences.",
+        "categories": [
+          {
+            "title": "Frontend",
+            "icon": "palette",
+            "accentFrom": "#06b6d4",
+            "accentTo": "#2563eb",
+            "skills": [
+              { "name": "React.js", "level": 92 },
+              { "name": "Next.js", "level": 88 },
+              { "name": "JavaScript (ES6+)", "level": 90 },
+              { "name": "HTML & CSS", "level": 95 },
+              { "name": "Tailwind CSS", "level": 89 }
+            ]
+          },
+          {
+            "title": "Backend",
+            "icon": "server",
+            "accentFrom": "#8b5cf6",
+            "accentTo": "#9333ea",
+            "skills": [
+              { "name": "Node.js", "level": 85 },
+              { "name": "Express.js", "level": 83 },
+              { "name": "MongoDB", "level": 80 },
+              { "name": "JWT Auth", "level": 82 },
+              { "name": "Socket.io", "level": 75 }
+            ]
+          },
+          {
+            "title": "Tools & Others",
+            "icon": "wrench",
+            "accentFrom": "#10b981",
+            "accentTo": "#0d9488",
+            "skills": [
+              { "name": "Git & GitHub", "level": 91 },
+              { "name": "Redux Toolkit", "level": 84 },
+              { "name": "Zustand", "level": 80 },
+              { "name": "Cloudinary", "level": 77 },
+              { "name": "Bootstrap", "level": 86 }
+            ]
+          }
+        ],
+        "badges": [
+          "HTML", "CSS", "JavaScript", "React.js", "Next.js",
+          "Node.js", "Express.js", "MongoDB", "Tailwind CSS",
+          "Redux", "Zustand", "Git", "GitHub", "Socket.io",
+          "JWT", "Cloudinary", "Bootstrap"
+        ]
+      },
+
+      "resume": {
+        "eyebrow": "Curriculum Vitae",
+        "title": "My",
+        "highlight": "Resume",
+        "subtitle": "Preview my resume right here or download it for later.",
+        "file": "/ArafatRahmanResume.pdf",
+        "modalTitle": "Arafat Rahman — Resume",
+        "downloadLabel": "Download Resume",
+        "viewLabel": "View Resume"
+      },
+
+      "education": {
+        "enabled": false,
+        "eyebrow": "Education",
+        "title": "Academic",
+        "highlight": "Background",
+        "items": []
+      },
+
+      "contact": {
+        "eyebrow": "Get In Touch",
+        "title": "Let's",
+        "highlight": "Work Together",
+        "subtitle": "Have a project in mind or just want to say hello? Drop me a message — I'd love to hear from you.",
+        "endpoint": "https://get-mail-backend.onrender.com/send",
+        "formTitle": "Send a Message",
+        "info": [
+          { "icon": "mail", "label": "Email", "value": "arafat.rahman.6003@gmail.com", "href": "mailto:arafat.rahman.6003@gmail.com", "accentFrom": "#06b6d4", "accentTo": "#3b82f6" },
+          { "icon": "phone", "label": "Phone", "value": "+880 1580-578264", "href": "tel:+8801580578264", "accentFrom": "#8b5cf6", "accentTo": "#9333ea" },
+          { "icon": "map-pin", "label": "Location", "value": "Dhaka, Bangladesh", "href": null, "accentFrom": "#10b981", "accentTo": "#14b8a6" }
+        ],
+        "fields": [
+          { "name": "name", "label": "Your Name", "type": "text", "autoComplete": "name" },
+          { "name": "email", "label": "Your Email", "type": "email", "autoComplete": "email" },
+          { "name": "message", "label": "Your Message", "type": "textarea", "rows": 6 }
+        ],
+        "messages": {
+          "sending": "Sending…",
+          "submit": "Send Message",
+          "success": "Message sent — I'll get back to you soon!",
+          "validation": "Please fill in all fields.",
+          "failure": "Failed to send message. Try again.",
+          "network": "Network error. Please try again later."
+        }
+      }
+    }
+  },
+
+  "footer": {
+    "tagline": "Full-Stack Developer crafting premium digital experiences.",
+    "bigText": "Let's build something great.",
+    "credit": "Designed & Built with Next.js, Three.js & Framer Motion"
+  }
+}

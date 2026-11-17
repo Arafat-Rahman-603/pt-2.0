@@ -1,38 +1,46 @@
-import Navbar from "@/componentes/Navbar";
-import Hero from "@/componentes/Hero";
-import DigitalBrochure from "@/componentes/DigitalBrochure";
-import Projects from "@/componentes/Projects";
-import About from "@/componentes/About";
-import Contact from "@/componentes/Contact";
-import Skills from "@/componentes/Skills";
-import Reviews from "@/componentes/Reviews";
-import Education from "@/componentes/Education";
-import Resume from "@/componentes/Resume";
-import Footer from "@/componentes/Footer";
-import CustomCursor from "@/componentes/CustomCursor ";
-import Background3D from "@/componentes/Background3D";
-import ScrollProgress from "@/componentes/ScrollProgress";
+import { getPage, navigation, socials, footer, site } from "@/lib/content";
 
-export default function Home() {
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import BackgroundCanvas from "@/components/three/BackgroundCanvas";
+import CustomCursor from "@/components/effects/CustomCursor";
+import ScrollProgress from "@/components/effects/ScrollProgress";
+
+import Hero from "@/components/sections/Hero";
+import TechMarquee from "@/components/sections/TechMarquee";
+import Journey from "@/components/sections/Journey";
+import Projects from "@/components/sections/Projects";
+import Reviews from "@/components/sections/Reviews";
+import About from "@/components/sections/About";
+import Skills from "@/components/sections/Skills";
+import Resume from "@/components/sections/Resume";
+import Education from "@/components/sections/Education";
+import Contact from "@/components/sections/Contact";
+
+export default function HomePage() {
+  const home = getPage("home");
+
   return (
     <>
-      <Background3D />
+      <BackgroundCanvas />
       <CustomCursor />
       <ScrollProgress />
+
       <div className="site-content">
-        <Navbar />
-        <main>
-          <Hero />
-          <DigitalBrochure />
-          <Projects />
-          <Reviews />
-          <About />
-          <Skills />
-          <Resume />
-          <Education />
-          <Contact />
+        <Navbar navigation={navigation} siteName={site.name} />
+        <main id="main">
+          <Hero data={home.hero} />
+          <TechMarquee items={home.marquee} />
+          <Journey data={home.journey} />
+          <Projects data={home.projects} />
+          <Reviews data={home.reviews} />
+          <About data={home.about} />
+          <Skills data={home.skills} />
+          <Resume data={home.resume} />
+          <Education data={home.education} />
+          <Contact data={home.contact} socials={socials} />
         </main>
-        <Footer />
+        <Footer data={footer} navigation={navigation} socials={socials} siteName={site.name} />
       </div>
     </>
   );
